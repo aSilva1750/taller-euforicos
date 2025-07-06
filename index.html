@@ -19,7 +19,13 @@
           <a href="productos.html" class="text-gray-300 hover:text-white transition duration-300">Productos</a>
           <a href="#contacto" class="text-gray-300 hover:text-white transition duration-300">Contacto</a>
         </nav>
-        <button class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex-col items-center justify-center space-y-8 text-2xl font-bold hidden md:hidden transition-all duration-300">
+          <a href="productos.html" class="block text-gray-300 hover:text-white" onclick="toggleMobileMenu()">Productos</a>
+          <a href="#contacto" class="block text-gray-300 hover:text-white" onclick="toggleMobileMenu()">Contacto</a>
+          <button onclick="toggleMobileMenu()" class="mt-8 text-gray-400 hover:text-white text-lg">Cerrar ✕</button>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
       </div>
@@ -158,6 +164,14 @@
 
       // Inicializar
       showTestimonial(currentTestimonial);
+
+      // Menú móvil
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      function toggleMobileMenu() {
+        mobileMenu.classList.toggle('hidden');
+      }
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
     </script>
   </body>
 </html>
