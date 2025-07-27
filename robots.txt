@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://taller-euforicos.com/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all images and assets
+Allow: /public/
+Allow: /images/
+Allow: /css/
+Allow: /js/ 
