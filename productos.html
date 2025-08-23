@@ -4,70 +4,202 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos - Taller Eufóricos</title>
+    <title>Productos - EUFÓRICOS FULLRACE</title>
     <link rel="stylesheet" href="./public/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   </head>
-  <body class="bg-gray-900 text-white font-sans">
+  <body class="bg-gray-50 text-gray-800 font-sans">
 
     <!-- Header -->
-    <header class="bg-black shadow-md">
-      <div class="container mx-auto px-4 sm:px-6 py-4 flex flex-wrap justify-between items-center">
-        <h1 class="text-2xl sm:text-3xl font-extrabold text-white uppercase mb-2 sm:mb-0">Taller <span class="text-red-600">Eufóricos</span></h1>
-        <nav class="hidden md:flex space-x-6">
-          <a href="./" class="text-gray-300 hover:text-white transition duration-300">Inicio</a>
-          <a href="./productos.html" class="text-red-500 font-semibold">Productos</a>
-          <a href="./#contacto" class="text-gray-300 hover:text-white transition duration-300">Contacto</a>
+    <header class="bg-white shadow-lg border-b-4 border-red-600 sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 py-4">
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Logo -->
+          <a href="./" class="flex items-center mb-2 sm:mb-0">
+            <img src="./public/image/EuforicosLogo-removebg-preview.png" alt="Logo Eufóricos" class="h-16 sm:h-20 w-auto mr-4 drop-shadow-lg" />
+            <div class="hidden sm:block">
+              <h1 class="text-2xl font-bold text-gray-900">EUFÓRICOS</h1>
+              <p class="text-sm text-red-600 font-semibold">FULLRACE</p>
+            </div>
+          </a>
+
+          <!-- Phone Number -->
+          <div class="flex items-center space-x-4">
+            <a href="https://wa.me/56950688317" target="_blank" class="hidden sm:flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300">
+              <i class="fab fa-whatsapp mr-2"></i>
+              <span class="font-semibold">+56 9 5068 8317</span>
+            </a>
+            <button id="mobile-menu-btn" class="lg:hidden text-gray-600 hover:text-red-600 focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden lg:flex justify-center mt-6 space-x-8 border-t border-gray-200 pt-4">
+          <a href="./" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Inicio</a>
+          <a href="./productos.html" class="text-red-600 font-semibold">Productos</a>
+          <a href="./mecanica-competicion.html" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Mecánica</a>
+          <a href="./#servicios" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Servicios</a>
+          <a href="./#contacto" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Contacto</a>
         </nav>
-        <button class="md:hidden text-gray-300 hover:text-white focus:outline-none ml-auto">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-        </button>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex-col items-center justify-center space-y-8 text-2xl font-bold hidden lg:hidden transition-all duration-300">
+          <a href="./" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Inicio</a>
+          <a href="./productos.html" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Productos</a>
+          <a href="./mecanica-competicion.html" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Mecánica</a>
+          <a href="./#servicios" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Servicios</a>
+          <a href="./#contacto" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Contacto</a>
+          <button onclick="toggleMobileMenu()" class="mt-8 text-red-400 hover:text-white text-lg">Cerrar ✕</button>
+        </div>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative text-center bg-black">
-      <div class="container mx-auto px-4 sm:px-6 py-12 sm:py-20 flex flex-col items-center justify-center">
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-4">Nuestros Productos</h2>
-        <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">Descubre nuestra amplia gama de productos de alta calidad para el mantenimiento y optimización de tu vehículo.</p>
+    <section class="relative bg-gradient-to-br from-gray-900 via-red-900 to-black text-white py-20 sm:py-32">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <h2 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6">
+            Nuestros <span class="text-red-500">Productos</span>
+          </h2>
+          <p class="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed">
+            Descubre nuestra amplia gama de productos de alta calidad para el mantenimiento y optimización de tu vehículo.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Products Grid -->
-    <main class="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
-        <!-- Product Card: Aceite de Motor -->
-        <div class="bg-white rounded-lg shadow-md flex flex-col items-center p-4 transition-transform hover:scale-105 cursor-pointer group">
-          <a href="./producto-aceite-motor.html" class="block w-full flex flex-col items-center">
-            <!-- Imagen para escritorio/tablet -->
-            <img src="./public/image/productos/AceiteMotor.jpg" alt="Aceite de Motor 10W-40" class="hidden md:block object-contain w-full max-w-[140px] max-h-[140px] mb-4 rounded-md group-hover:shadow-lg transition-shadow" />
-            <!-- Imagen para móvil -->
-            <img src="./public/image/productos/AceiteMotor.jpg" alt="Aceite de Motor 10W-40" class="object-contain w-full max-w-[100px] sm:max-w-[140px] max-h-[100px] sm:max-h-[140px] mb-4 rounded-md group-hover:shadow-lg transition-shadow" />
-          </a>
-          <div class="w-full flex-1 flex flex-col items-center">
-            <h3 class="text-base font-semibold text-gray-900 text-center mb-1">Aceite de Motor 10W-40</h3>
-            <span class="text-xs text-gray-500 mb-2">Semi Sintético</span>
-            <a href="./producto-aceite-motor.html" class="text-sm text-red-600 font-bold hover:underline">Ver Detalles</a>
+    <main class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Product Card: Aceite de Motor -->
+          <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 transition-all duration-300 hover:scale-105 cursor-pointer group border border-gray-200">
+            <a href="./producto-aceite-motor.html" class="block w-full flex flex-col items-center">
+              <!-- Contenedor de imagen con fallback -->
+              <div class="w-full max-w-[160px] h-[160px] mb-6 rounded-lg bg-gray-50 border-2 border-gray-200 flex items-center justify-center group-hover:border-red-300 transition-colors duration-300">
+                <img 
+                  src="./public/image/productos/AceiteMotor.jpg" 
+                  alt="Aceite de Motor 10W-40" 
+                  class="w-full h-full object-contain rounded-lg group-hover:shadow-xl transition-shadow"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <!-- Fallback si la imagen no carga -->
+                <div class="hidden flex-col items-center justify-center text-center p-4">
+                  <i class="fas fa-oil-can text-4xl text-gray-400 mb-2"></i>
+                  <span class="text-sm text-gray-500 font-medium">Aceite de Motor</span>
+                  <span class="text-xs text-gray-400">10W-40</span>
+                </div>
+              </div>
+            </a>
+            <div class="w-full flex-1 flex flex-col items-center text-center">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Aceite de Motor 10W-40</h3>
+              <span class="text-sm text-gray-600 mb-4 bg-gray-100 px-3 py-1 rounded-full">Semi Sintético</span>
+              <a href="./producto-aceite-motor.html" class="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 transform hover:scale-105">
+                Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <!-- Placeholder for future products -->
-        <div class="bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-4 min-h-[180px] sm:min-h-[260px]">
-          <span class="text-gray-400">Próximamente más productos</span>
-        </div>
-        <div class="bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-4 min-h-[180px] sm:min-h-[260px]">
-          <span class="text-gray-400">Próximamente más productos</span>
+          <!-- Placeholder for future products -->
+          <div class="bg-white rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-6 min-h-[280px] group hover:border-red-400 transition-colors duration-300">
+            <i class="fas fa-plus-circle text-4xl text-gray-400 mb-4 group-hover:text-red-400 transition-colors duration-300"></i>
+            <span class="text-gray-500 text-center">Próximamente más productos</span>
+          </div>
+          <div class="bg-white rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-6 min-h-[280px] group hover:border-red-400 transition-colors duration-300">
+            <i class="fas fa-plus-circle text-4xl text-gray-400 mb-4 group-hover:text-red-400 transition-colors duration-300"></i>
+            <span class="text-gray-500 text-center">Próximamente más productos</span>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-gray-800 py-8">
-      <div class="container mx-auto px-4 sm:px-6 text-center text-gray-500">
-        <p>&copy; 2024 Taller Eufóricos. Todos los derechos reservados.</p>
-        <p class="mt-2">Diseñado con <span class="text-red-500">&hearts;</span> por la comunidad de código abierto.</p>
+    <footer id="contacto" class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Información de la empresa -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Información de la empresa</h4>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3"></i>
+                <p class="text-gray-300">SAN PABLO 8966, PUDAHUEL<br>Santiago, Chile</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-red-500 mr-3"></i>
+                <a href="https://wa.me/56950688317" target="_blank" class="text-gray-300 hover:text-red-400 transition duration-300">
+                  (+56) 9 5068 8317
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-red-500 mr-3"></i>
+                <a href="mailto:CARLOS.EUFORICOS.CHILE@GMAIL.COM" class="text-gray-300 hover:text-red-400 transition duration-300">
+                  CARLOS.EUFORICOS.CHILE@GMAIL.COM
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-globe text-red-500 mr-3"></i>
+                <a href="http://WWW.EUFORICOSPARTS.CL" target="_blank" class="text-gray-300 hover:text-red-400 transition duration-300">
+                  WWW.EUFORICOSPARTS.CL
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Servicios -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Servicios</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Mecánica General</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Mecánica de Competición</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Programación ECU</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Repuestos</a></li>
+            </ul>
+          </div>
+
+          <!-- Productos -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Productos</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Ofertas</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Novedades</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Los más vendidos</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Repuestos Originales</a></li>
+            </ul>
+          </div>
+
+          <!-- Síguenos -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Síguenos</h4>
+            <div class="flex space-x-4">
+              <a href="https://www.instagram.com/euforicos.parts?igsh=MWVzMXR0MGdzazc5cA==" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-lg hover:scale-110 transition duration-300">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="https://wa.me/56950688317" target="_blank" class="bg-green-500 text-white p-3 rounded-lg hover:scale-110 transition duration-300">
+                <i class="fab fa-whatsapp text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2024 EUFÓRICOS FULLRACE. Todos los derechos reservados.</p>
+        </div>
       </div>
     </footer>
 
     <script type="module" src="src/main.js"></script>
+    <script>
+      // Menú móvil
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      function toggleMobileMenu() {
+        mobileMenu.classList.toggle('hidden');
+      }
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    </script>
   </body>
 </html> 

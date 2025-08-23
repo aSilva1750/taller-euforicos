@@ -4,48 +4,76 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aceite de Motor 10W-40 - Taller Eufóricos</title>
+    <title>Aceite de Motor 10W-40 - EUFÓRICOS FULLRACE</title>
     <link rel="stylesheet" href="./public/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   </head>
-  <body class="bg-gray-900 text-white font-sans">
+  <body class="bg-gray-50 text-gray-800 font-sans">
 
     <!-- Header -->
-    <header class="bg-black shadow-md">
-      <div class="container mx-auto px-4 sm:px-6 py-4 flex flex-wrap justify-between items-center">
-        <h1 class="text-2xl sm:text-3xl font-extrabold text-white uppercase mb-2 sm:mb-0">Taller <span class="text-red-600">Eufóricos</span></h1>
-        <nav class="hidden md:flex space-x-6">
-          <a href="./" class="text-gray-300 hover:text-white transition duration-300">Inicio</a>
-          <a href="./productos.html" class="text-red-500 font-semibold">Productos</a>
-          <a href="./#contacto" class="text-gray-300 hover:text-white transition duration-300">Contacto</a>
+    <header class="bg-white shadow-lg border-b-4 border-red-600 sticky top-0 z-50">
+      <div class="container mx-auto px-4 sm:px-6 py-4">
+        <div class="flex flex-wrap justify-between items-center">
+          <!-- Logo -->
+          <a href="./" class="flex items-center mb-2 sm:mb-0">
+            <img src="./public/image/EuforicosLogo-removebg-preview.png" alt="Logo Eufóricos" class="h-16 sm:h-20 w-auto mr-4 drop-shadow-lg" />
+            <div class="hidden sm:block">
+              <h1 class="text-2xl font-bold text-gray-900">EUFÓRICOS</h1>
+              <p class="text-sm text-red-600 font-semibold">FULLRACE</p>
+            </div>
+          </a>
+
+          <!-- Phone Number -->
+          <div class="flex items-center space-x-4">
+            <a href="https://wa.me/56950688317" target="_blank" class="hidden sm:flex items-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300">
+              <i class="fab fa-whatsapp mr-2"></i>
+              <span class="font-semibold">+56 9 5068 8317</span>
+            </a>
+            <button id="mobile-menu-btn" class="lg:hidden text-gray-600 hover:text-red-600 focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden lg:flex justify-center mt-6 space-x-8 border-t border-gray-200 pt-4">
+          <a href="./" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Inicio</a>
+          <a href="./productos.html" class="text-red-600 font-semibold">Productos</a>
+          <a href="./mecanica-competicion.html" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Mecánica</a>
+          <a href="./#servicios" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Servicios</a>
+          <a href="./#contacto" class="text-gray-700 hover:text-red-600 font-semibold transition duration-300">Contacto</a>
         </nav>
-        <button class="md:hidden text-gray-300 hover:text-white focus:outline-none ml-auto">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-        </button>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex-col items-center justify-center space-y-8 text-2xl font-bold hidden lg:hidden transition-all duration-300">
+          <a href="./" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Inicio</a>
+          <a href="./productos.html" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Productos</a>
+          <a href="./mecanica-competicion.html" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Mecánica</a>
+          <a href="./#servicios" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Servicios</a>
+          <a href="./#contacto" class="block text-white hover:text-red-400" onclick="toggleMobileMenu()">Contacto</a>
+          <button onclick="toggleMobileMenu()" class="mt-8 text-red-400 hover:text-white text-lg">Cerrar ✕</button>
+        </div>
       </div>
     </header>
 
     <!-- Breadcrumb -->
-    <div class="bg-gray-800 py-4">
-      <div class="container mx-auto px-6">
+    <div class="bg-white border-b border-gray-200 py-4">
+      <div class="container mx-auto px-4 sm:px-6">
         <nav class="flex" aria-label="Breadcrumb">
           <ol class="inline-flex items-center space-x-1 md:space-x-3">
             <li class="inline-flex items-center">
-              <a href="./" class="text-gray-400 hover:text-white transition duration-300">Inicio</a>
+              <a href="./" class="text-gray-500 hover:text-red-600 transition duration-300">Inicio</a>
             </li>
             <li>
               <div class="flex items-center">
-                <svg class="w-6 h-6 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <a href="./productos.html" class="text-gray-400 hover:text-white transition duration-300">Productos</a>
+                <i class="fas fa-chevron-right text-gray-400 mx-2 text-sm"></i>
+                <a href="./productos.html" class="text-gray-500 hover:text-red-600 transition duration-300">Productos</a>
               </div>
             </li>
             <li>
               <div class="flex items-center">
-                <svg class="w-6 h-6 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="text-white">Aceite de Motor 10W-40</span>
+                <i class="fas fa-chevron-right text-gray-400 mx-2 text-sm"></i>
+                <span class="text-gray-900 font-medium">Aceite de Motor 10W-40</span>
               </div>
             </li>
           </ol>
@@ -54,89 +82,191 @@
     </div>
 
     <!-- Product Detail Section -->
-    <main class="container mx-auto px-4 sm:px-6 py-10 flex flex-col items-center">
-      <div class="w-full max-w-3xl bg-white/90 rounded-2xl shadow-2xl p-6 sm:p-10 flex flex-col gap-8">
-        <!-- Título y subtítulo -->
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Aceite de Motor 10W-40 Semi Sintético</h1>
-        <span class="text-base font-semibold text-red-600">Alto rendimiento</span>
-        <!-- Imagen centrada -->
-        <div class="flex justify-center items-center bg-gray-100 rounded-xl p-4">
-          <img src="./public/image/productos/AceiteMotor.jpg" alt="Aceite de Motor 10W-40 Semi Sintético" class="object-contain w-full max-w-xs sm:max-w-sm h-auto rounded-lg shadow-md" />
-        </div>
-        <!-- Descripción principal -->
-        <div class="mt-2 mb-2">
-          <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
-            Lubricante 10W-40 semi sintético diseñado para motores a gasolina y diésel. Proporciona excelente protección en altas y bajas temperaturas, ideal para vehículos que exigen un rendimiento superior en el tráfico urbano y carretera.
-          </p>
-        </div>
-        <!-- Características -->
-        <div class="mb-2">
-          <h2 class="text-lg font-bold text-gray-800 mb-2">Características</h2>
-          <ul class="space-y-2">
-            <li class="flex items-start text-gray-700 text-sm"><span class="text-red-500 mr-2 mt-1">✓</span> Excelente viscosidad para protección al arranque en frío</li>
-            <li class="flex items-start text-gray-700 text-sm"><span class="text-red-500 mr-2 mt-1">✓</span> Estabilidad térmica en condiciones exigentes</li>
-            <li class="flex items-start text-gray-700 text-sm"><span class="text-red-500 mr-2 mt-1">✓</span> Compatible con motores turboalimentados o atmosféricos</li>
-            <li class="flex items-start text-gray-700 text-sm"><span class="text-red-500 mr-2 mt-1">✓</span> Cumple con normas API SN / ACEA A3/B4</li>
-          </ul>
-        </div>
-        <!-- Especificaciones -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-2">
-          <div class="bg-gray-100 rounded-xl p-4 shadow text-center">
-            <div class="text-xs text-gray-500 mb-1">Aplicación</div>
-            <div class="text-gray-800 font-bold text-sm">Vehículos livianos</div>
+    <main class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <!-- Título y subtítulo -->
+          <div class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Aceite de Motor 10W-40 Semi Sintético</h1>
+            <span class="inline-block bg-red-100 text-red-700 text-sm font-semibold px-4 py-2 rounded-full">Alto rendimiento</span>
           </div>
-          <div class="bg-gray-100 rounded-xl p-4 shadow text-center">
-            <div class="text-xs text-gray-500 mb-1">Contenido</div>
-            <div class="text-gray-800 font-bold text-sm">Bidón 4L</div>
+          
+          <!-- Imagen centrada -->
+          <div class="flex justify-center items-center bg-gray-50 rounded-xl p-8 mb-8">
+            <img src="./public/image/productos/AceiteMotor.jpg" alt="Aceite de Motor 10W-40 Semi Sintético" class="object-contain w-full max-w-sm sm:max-w-md h-auto rounded-lg shadow-lg" />
           </div>
-          <div class="bg-gray-100 rounded-xl p-4 shadow text-center">
-            <div class="text-xs text-gray-500 mb-1">Viscosidad</div>
-            <div class="text-gray-800 font-bold text-sm">10W-40</div>
+          
+          <!-- Descripción principal -->
+          <div class="mb-8">
+            <p class="text-gray-700 leading-relaxed text-lg text-center">
+              Lubricante 10W-40 semi sintético diseñado para motores a gasolina y diésel. Proporciona excelente protección en altas y bajas temperaturas, ideal para vehículos que exigen un rendimiento superior en el tráfico urbano y carretera.
+            </p>
           </div>
-          <div class="bg-gray-100 rounded-xl p-4 shadow text-center">
-            <div class="text-xs text-gray-500 mb-1">Tipo</div>
-            <div class="text-gray-800 font-bold text-sm">Semi Sintético</div>
+          
+          <!-- Características -->
+          <div class="mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Características</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Excelente viscosidad para protección al arranque en frío</span>
+              </div>
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Estabilidad térmica en condiciones exigentes</span>
+              </div>
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Compatible con motores turboalimentados o atmosféricos</span>
+              </div>
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Cumple con normas API SN / ACEA A3/B4</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <!-- Información adicional -->
-        <div class="w-full bg-blue-50 border-l-4 border-blue-400 p-3 rounded-lg text-blue-700 text-xs mt-2">
-          Este producto puede estar sujeto a disponibilidad. Consulta con nuestro equipo técnico para confirmar stock y recibir recomendaciones específicas según tu vehículo.
+          
+          <!-- Especificaciones -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Aplicación</div>
+              <div class="text-gray-800 font-bold">Vehículos livianos</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Contenido</div>
+              <div class="text-gray-800 font-bold">Bidón 4L</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Viscosidad</div>
+              <div class="text-gray-800 font-bold">10W-40</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Tipo</div>
+              <div class="text-gray-800 font-bold">Semi Sintético</div>
+            </div>
+          </div>
+          
+          <!-- Información adicional -->
+          <div class="w-full bg-blue-50 border-l-4 border-blue-400 p-4 rounded-lg text-blue-700 text-sm">
+            <i class="fas fa-info-circle mr-2"></i>
+            Este producto puede estar sujeto a disponibilidad. Consulta con nuestro equipo técnico para confirmar stock y recibir recomendaciones específicas según tu vehículo.
+          </div>
         </div>
       </div>
     </main>
 
     <!-- Related Products Section -->
-    <section class="bg-black py-8 sm:py-16">
+    <section class="py-16 bg-white">
       <div class="container mx-auto px-4 sm:px-6">
-        <h2 class="text-xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Productos Relacionados</h2>
-        <div class="mx-auto max-w-2xl sm:max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-12">
-          <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center min-h-[180px]">
-            <span class="block bg-gray-700 text-gray-400 text-center rounded-md py-1 px-4 mb-4">Próximamente</span>
-            <h3 class="text-lg font-bold text-white mb-1 text-center">Aceite de Transmisión</h3>
-            <p class="text-gray-400 text-sm text-center">Especializado para cajas de cambio</p>
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Productos Relacionados</h2>
+          <p class="text-gray-600 text-lg">Descubre más productos de nuestra línea</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="bg-gray-50 rounded-xl p-8 flex flex-col items-center justify-center min-h-[200px] border border-gray-200 hover:border-red-300 transition-colors duration-300">
+            <span class="block bg-gray-200 text-gray-600 text-center rounded-full py-2 px-4 mb-4 text-sm font-medium">Próximamente</span>
+            <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Aceite de Transmisión</h3>
+            <p class="text-gray-600 text-sm text-center">Especializado para cajas de cambio</p>
           </div>
-          <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center min-h-[180px]">
-            <span class="block bg-gray-700 text-gray-400 text-center rounded-md py-1 px-4 mb-4">Próximamente</span>
-            <h3 class="text-lg font-bold text-white mb-1 text-center">Aceite de Frenos</h3>
-            <p class="text-gray-400 text-sm text-center">Alta temperatura y rendimiento</p>
+          <div class="bg-gray-50 rounded-xl p-8 flex flex-col items-center justify-center min-h-[200px] border border-gray-200 hover:border-red-300 transition-colors duration-300">
+            <span class="block bg-gray-200 text-gray-600 text-center rounded-full py-2 px-4 mb-4 text-sm font-medium">Próximamente</span>
+            <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Aceite de Frenos</h3>
+            <p class="text-gray-600 text-sm text-center">Alta temperatura y rendimiento</p>
           </div>
-          <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center min-h-[180px]">
-            <span class="block bg-gray-700 text-gray-400 text-center rounded-md py-1 px-4 mb-4">Próximamente</span>
-            <h3 class="text-lg font-bold text-white mb-1 text-center">Líquido Refrigerante</h3>
-            <p class="text-gray-400 text-sm text-center">Protección anticorrosiva</p>
+          <div class="bg-gray-50 rounded-xl p-8 flex flex-col items-center justify-center min-h-[200px] border border-gray-200 hover:border-red-300 transition-colors duration-300">
+            <span class="block bg-gray-200 text-gray-600 text-center rounded-full py-2 px-4 mb-4 text-sm font-medium">Próximamente</span>
+            <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Líquido Refrigerante</h3>
+            <p class="text-gray-600 text-sm text-center">Protección anticorrosiva</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800 py-8">
-      <div class="container mx-auto px-4 sm:px-6 text-center text-gray-500">
-        <p>&copy; 2024 Taller Eufóricos. Todos los derechos reservados.</p>
-        <p class="mt-2">Diseñado con <span class="text-red-500">&hearts;</span> por la comunidad de código abierto.</p>
+    <footer id="contacto" class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Información de la empresa -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Información de la empresa</h4>
+            <div class="space-y-3">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-red-500 mt-1 mr-3"></i>
+                <p class="text-gray-300">SAN PABLO 8966, PUDAHUEL<br>Santiago, Chile</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-red-500 mr-3"></i>
+                <a href="https://wa.me/56950688317" target="_blank" class="text-gray-300 hover:text-red-400 transition duration-300">
+                  (+56) 9 5068 8317
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-red-500 mr-3"></i>
+                <a href="mailto:CARLOS.EUFORICOS.CHILE@GMAIL.COM" class="text-gray-300 hover:text-red-400 transition duration-300">
+                  CARLOS.EUFORICOS.CHILE@GMAIL.COM
+                </a>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-globe text-red-500 mr-3"></i>
+                <a href="http://WWW.EUFORICOSPARTS.CL" target="_blank" class="text-gray-300 hover:text-red-400 transition duration-300">
+                  WWW.EUFORICOSPARTS.CL
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Servicios -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Servicios</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Mecánica General</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Mecánica de Competición</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Programación ECU</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Repuestos</a></li>
+            </ul>
+          </div>
+
+          <!-- Productos -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Productos</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Ofertas</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Novedades</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Los más vendidos</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-red-400 transition duration-300">Repuestos Originales</a></li>
+            </ul>
+          </div>
+
+          <!-- Síguenos -->
+          <div>
+            <h4 class="text-xl font-bold text-white mb-6">Síguenos</h4>
+            <div class="flex space-x-4">
+              <a href="https://www.instagram.com/euforicos.parts?igsh=MWVzMXR0MGdzazc5cA==" target="_blank" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-lg hover:scale-110 transition duration-300">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="https://wa.me/56950688317" target="_blank" class="bg-green-500 text-white p-3 rounded-lg hover:scale-110 transition duration-300">
+                <i class="fab fa-whatsapp text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 text-center">
+          <p class="text-gray-400">&copy; 2024 EUFÓRICOS FULLRACE. Todos los derechos reservados.</p>
+        </div>
       </div>
     </footer>
 
     <script type="module" src="src/main.js"></script>
+    <script>
+      // Menú móvil
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      function toggleMobileMenu() {
+        mobileMenu.classList.toggle('hidden');
+      }
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    </script>
   </body>
 </html> 
