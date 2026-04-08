@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./public/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos - EUFÓRICOS FULLRACE</title>
+    <title>Ruedas fónicas - EUFÓRICOS FULLRACE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   </head>
@@ -56,115 +56,132 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-gray-900 via-red-900 to-black text-white py-20 sm:py-32">
-      <div class="absolute inset-0 bg-black opacity-50"></div>
-      <div class="container mx-auto px-4 sm:px-6 relative z-10">
-        <div class="text-center max-w-4xl mx-auto">
-          <h2 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-6">
-            Nuestros <span class="text-red-500">Productos</span>
-          </h2>
-          <p class="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed">
-            Descubre nuestra amplia gama de productos de alta calidad para el mantenimiento y optimización de tu vehículo.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products Grid -->
-    <main class="py-20 bg-gray-50">
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-gray-200 py-4">
       <div class="container mx-auto px-4 sm:px-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <!-- Product Card: Aceite de Motor -->
-          <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 transition-all duration-300 hover:scale-105 cursor-pointer group border border-gray-200">
-            <a href="./producto-aceite-motor.html" class="block w-full flex flex-col items-center">
-              <!-- Contenedor de imagen con fallback -->
-              <div class="w-full max-w-[160px] h-[160px] mb-6 rounded-lg bg-gray-50 border-2 border-gray-200 flex items-center justify-center group-hover:border-red-300 transition-colors duration-300">
-                <img 
-                  src="./public/image/productos/AceiteMotor.jpg" 
-                  alt="Aceite de Motor 10W-40" 
-                  class="w-full h-full object-contain rounded-lg group-hover:shadow-xl transition-shadow"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                />
-                <!-- Fallback si la imagen no carga -->
-                <div class="hidden flex-col items-center justify-center text-center p-4">
-                  <i class="fas fa-oil-can text-4xl text-gray-400 mb-2"></i>
-                  <span class="text-sm text-gray-500 font-medium">Aceite de Motor</span>
-                  <span class="text-xs text-gray-400">10W-40</span>
-                </div>
+        <nav class="flex" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="./" class="text-gray-500 hover:text-red-600 transition duration-300">Inicio</a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <i class="fas fa-chevron-right text-gray-400 mx-2 text-sm"></i>
+                <a href="./productos.html" class="text-gray-500 hover:text-red-600 transition duration-300">Productos</a>
               </div>
-            </a>
-            <div class="w-full flex-1 flex flex-col items-center text-center">
-              <h3 class="text-lg font-bold text-gray-900 mb-2">Aceite de Motor 10W-40</h3>
-              <span class="text-sm text-gray-600 mb-4 bg-gray-100 px-3 py-1 rounded-full">Semi Sintético</span>
-              <a href="./producto-aceite-motor.html" class="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 transform hover:scale-105">
-                Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
-              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <i class="fas fa-chevron-right text-gray-400 mx-2 text-sm"></i>
+                <span class="text-gray-900 font-medium">Ruedas fónicas</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <main class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <!-- Título y subtítulo -->
+          <div class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Ruedas fónicas</h1>
+            <span class="inline-block bg-red-100 text-red-700 text-sm font-semibold px-4 py-2 rounded-full">60-2 y 36 dientes</span>
+          </div>
+          
+          <!-- Imagen centrada -->
+          <div class="flex justify-center items-center bg-gray-50 rounded-xl p-8 mb-8">
+            <img src="./public/image/productos/RuedasFonicas.png" alt="Ruedas fónicas" class="object-contain w-full max-w-sm sm:max-w-md h-auto rounded-lg shadow-lg" />
+          </div>
+          
+          <!-- Descripción principal -->
+          <div class="mb-8">
+            <p class="text-gray-700 leading-relaxed text-lg text-center">
+              Ruedas fónicas para señal de posición del cigüeñal (CKP). Disponibles en varios diámetros y configuraciones de dientes para adaptarse a tu proyecto de motor o competición.
+            </p>
+          </div>
+          
+          <!-- Características -->
+          <div class="mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 text-center">Características</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Diámetros: 140, 160, 170, 180 y 190 mm</span>
+              </div>
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Configuraciones en 60-2 y 36 dientes</span>
+              </div>
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Construcción metálica para uso en motor</span>
+              </div>
+              <div class="flex items-start text-gray-700">
+                <i class="fas fa-check-circle text-red-500 mr-3 mt-1"></i>
+                <span>Precio referencial: $40.000</span>
+              </div>
             </div>
           </div>
-
-          <!-- Product Card: Ruedas fónicas -->
-          <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 transition-all duration-300 hover:scale-105 cursor-pointer group border border-gray-200">
-            <a href="./producto-ruedas-fonicas.html" class="block w-full flex flex-col items-center">
-              <!-- Contenedor de imagen con fallback -->
-              <div class="w-full max-w-[160px] h-[160px] mb-6 rounded-lg bg-gray-50 border-2 border-gray-200 flex items-center justify-center group-hover:border-red-300 transition-colors duration-300">
-                <img 
-                  src="./public/image/productos/RuedasFonicas.png" 
-                  alt="Ruedas fónicas" 
-                  class="w-full h-full object-contain rounded-lg group-hover:shadow-xl transition-shadow"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                />
-                <!-- Fallback si la imagen no carga -->
-                <div class="hidden flex-col items-center justify-center text-center p-4">
-                  <i class="fas fa-cog text-4xl text-gray-400 mb-2"></i>
-                  <span class="text-sm text-gray-500 font-medium">Ruedas fónicas</span>
-                  <span class="text-xs text-gray-400">60-2 / 36 dientes</span>
-                </div>
-              </div>
-            </a>
-            <div class="w-full flex-1 flex flex-col items-center text-center">
-              <h3 class="text-lg font-bold text-gray-900 mb-2">Ruedas fónicas</h3>
-              <span class="text-sm text-gray-600 mb-4 bg-gray-100 px-3 py-1 rounded-full">60-2 y 36 dientes</span>
-              <a href="./producto-ruedas-fonicas.html" class="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 transform hover:scale-105">
-                Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
-              </a>
+          
+          <!-- Especificaciones -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Diámetros</div>
+              <div class="text-gray-800 font-bold text-sm sm:text-base">140, 160, 170, 180, 190 mm</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Dientes</div>
+              <div class="text-gray-800 font-bold">60-2 y 36</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Precio</div>
+              <div class="text-gray-800 font-bold">$40.000</div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
+              <div class="text-xs text-gray-500 mb-2 font-medium">Aplicación</div>
+              <div class="text-gray-800 font-bold">Señal CKP</div>
             </div>
           </div>
-
-          <!-- Product Card: Red Line 10W-60 -->
-          <div class="bg-white rounded-xl shadow-lg flex flex-col items-center p-6 transition-all duration-300 hover:scale-105 cursor-pointer group border border-gray-200">
-            <a href="./producto-redline.html" class="block w-full flex flex-col items-center">
-              <div class="w-full max-w-[160px] h-[160px] mb-6 rounded-lg bg-gray-50 border-2 border-gray-200 flex items-center justify-center group-hover:border-red-300 transition-colors duration-300">
-                <img
-                  src="./public/image/productos/redlineUnico.jpeg"
-                  alt="Red Line aceite motor 10W-60"
-                  class="w-full h-full object-contain rounded-lg group-hover:shadow-xl transition-shadow"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-                />
-                <div class="hidden flex-col items-center justify-center text-center p-4">
-                  <i class="fas fa-oil-can text-4xl text-gray-400 mb-2"></i>
-                  <span class="text-sm text-gray-500 font-medium">Red Line</span>
-                  <span class="text-xs text-gray-400">10W-60</span>
-                </div>
-              </div>
-            </a>
-            <div class="w-full flex-1 flex flex-col items-center text-center">
-              <h3 class="text-lg font-bold text-gray-900 mb-2">Red Line 10W-60</h3>
-              <span class="text-sm text-gray-600 mb-4 bg-gray-100 px-3 py-1 rounded-full">$23.500 por litro</span>
-              <a href="./producto-redline.html" class="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg transition duration-300 transform hover:scale-105">
-                Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Placeholder for future products -->
-          <div class="bg-white rounded-xl border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-6 min-h-[280px] group hover:border-red-400 transition-colors duration-300">
-            <i class="fas fa-plus-circle text-4xl text-gray-400 mb-4 group-hover:text-red-400 transition-colors duration-300"></i>
-            <span class="text-gray-500 text-center">Próximamente más productos</span>
+          
+          <!-- Información adicional -->
+          <div class="w-full bg-blue-50 border-l-4 border-blue-400 p-4 rounded-lg text-blue-700 text-sm">
+            <i class="fas fa-info-circle mr-2"></i>
+            Este producto puede estar sujeto a disponibilidad. Consulta con nuestro equipo técnico para confirmar stock y recibir recomendaciones específicas según tu vehículo.
           </div>
         </div>
       </div>
     </main>
+
+    <!-- Related Products Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Productos Relacionados</h2>
+          <p class="text-gray-600 text-lg">Descubre más productos de nuestra línea</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <a href="./producto-aceite-motor.html" class="bg-gray-50 rounded-xl p-8 flex flex-col items-center justify-center min-h-[200px] border border-gray-200 hover:border-red-300 transition-colors duration-300">
+            <span class="block bg-red-100 text-red-700 text-center rounded-full py-2 px-4 mb-4 text-sm font-medium">Disponible</span>
+            <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Aceite de Motor 10W-40</h3>
+            <p class="text-gray-600 text-sm text-center">Semi sintético · Ver detalles</p>
+          </a>
+          <div class="bg-gray-50 rounded-xl p-8 flex flex-col items-center justify-center min-h-[200px] border border-gray-200 hover:border-red-300 transition-colors duration-300">
+            <span class="block bg-gray-200 text-gray-600 text-center rounded-full py-2 px-4 mb-4 text-sm font-medium">Próximamente</span>
+            <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Aceite de Frenos</h3>
+            <p class="text-gray-600 text-sm text-center">Alta temperatura y rendimiento</p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-8 flex flex-col items-center justify-center min-h-[200px] border border-gray-200 hover:border-red-300 transition-colors duration-300">
+            <span class="block bg-gray-200 text-gray-600 text-center rounded-full py-2 px-4 mb-4 text-sm font-medium">Próximamente</span>
+            <h3 class="text-lg font-bold text-gray-800 mb-2 text-center">Líquido Refrigerante</h3>
+            <p class="text-gray-600 text-sm text-center">Protección anticorrosiva</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contacto" class="bg-gray-900 text-white py-16">
