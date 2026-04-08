@@ -1,4 +1,6 @@
-import './style.css'
+// Sin importar CSS aquí: en producción las páginas cargan este archivo tal cual y el
+// navegador no puede resolver import './style.css' como módulo (error MIME text/css).
+// Los estilos usan Tailwind vía CDN en cada HTML.
 
 const WA_MECANICO = 'https://wa.me/56950688317'
 const WA_PRODUCTOS = 'https://wa.me/56928181247'
